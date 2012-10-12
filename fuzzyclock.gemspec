@@ -4,8 +4,8 @@ require File.expand_path('../lib/fuzzyclock/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Mike Bloy"]
   gem.email         = ["mike@bloy.org"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Fuzzy Clock utility}
+  gem.summary       = %q{A fuzzy clock}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)

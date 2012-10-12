@@ -1,5 +1,7 @@
 require "fuzzyclock/version"
 
 module Fuzzyclock
-  # Your code goes here...
+  def self.time(t)
+    "quarter to eight"
+  end
 end

@@ -8,7 +8,8 @@ describe Fuzzyclock do
 
   TEST_TIMES = {
     "7:45" => 'quarter to eight',
-    "19:45" => 'quarter to eight'
+    "19:45" => 'quarter to eight',
+    '7:00' => %(seven o'clock)
   }
 
   TEST_TIMES.each do |input, output|

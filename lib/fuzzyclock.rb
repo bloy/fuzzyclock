@@ -10,10 +10,14 @@ module Fuzzyclock
     hour = hour + 1 if (33..59).include?(minute)
     hour = ((hour - 1) % 12) + 1
     hour_text = HOURS[hour]
-    if (0..3).include?(minute) || (58..59).include?(minute)
-      return "#{hour_text} #{minute_text}"
+    if hour == 12
+      hour_text = (t.hour == 11 || t.hour == 12) ? 'noon' : 'midnight'
     end
-    "#{minute_text} #{hour_text}"
+    if (0..3).include?(minute) || (58..59).include?(minute)
+      hour == 12 ? hour_text : "#{hour_text} #{minute_text}"
+    else
+      "#{minute_text} #{hour_text}"
+    end
   end
 
   private
